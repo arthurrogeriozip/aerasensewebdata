@@ -1,4 +1,4 @@
-@import url("../css/index.css");
+@import url("index.css");
 
 body {
     background-color: var(--color-very-dark-blue);
@@ -12,7 +12,7 @@ nav {
 #mapa {
     position: absolute;
     top: -5px;
-    background-image: url("../images/Brazil_Blank_Map.svg");
+    background-image: url("../assets/images/Brazil_Blank_Map.svg");
     height: 750px;
     background-size: cover;
     width: 750px;

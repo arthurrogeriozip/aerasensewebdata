@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/finacadastro.css" />
+
+        <script src="cadastro.js"></script>
+        <link
+            rel="shortcut icon"
+            href="./assets/icons/favicon.ico"
+            type="image/x-icon"
+        />
+        <title>Aerasense | Cadastro </title>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="header">
+
+                    <img src="./assets/images/LogoBranca.png" alt="" />
+                    <p>Painel dashboard, com vários detalhes para aumentar a eficiência na identificação de vazamentos.</p>
+            </div>
+
+            <div class="form-container">
+                <form onsubmit="CadastrarForms(event)" class="forms">
+
+                    <div class="div-main-text">
+                        <p class="main-text"><span class="mini-asterisco">Finalize</span> seu cadastro</p>
+                    </div>
+
+                    <div class="container-input">
+                        <span class="minitext">E-mail <span class="mini-asterisco">*</span></span>
+                        <input
+                        type="email"
+                        placeholder="E-mail da empresa"
+                        id="input_email"
+                        />
+                    </div>
+
+                    <div class="container-input">
+
+                        <span class="minitext">Senha <span class="mini-asterisco">*</span></span>
+                        <div class="container-input-senha">
+                            <input
+                            type="password"
+                            placeholder="Sua senha"
+                            id="input_senha"
+                            />
+                            <button id="BtnOcultarSenha" onclick="FnOcultarSenha(1)" type="button"></button>
+                        </div>
+                    </div>
+
+                    <div class="container-input">
+                        <span class="minitext">Confirmar senha <span class="mini-asterisco">*</span></span>
+                        <div class="container-input-senha">
+
+                            <input
+                            type="password"
+                            placeholder="Confirmação de senha"
+                            id="input_confirmsenha"
+                            />
+                            <button id="BtnOcultarConfSenha" onclick="FnOcultarSenha(2)" type="button"></button>
+                        </div>
+                    </div>
+
+                    <div class="container-mensagens-errors">
+                        <span class="Erros" id="ID_Erros"></span>
+                    </div>
+
+                    <div class="container-termocondi">
+                        <input type="checkbox" id="input_termo" />
+                        <label for="input_termo"
+                        >Concordo com os <a href="">Termos e Condições</a></label
+                        >
+                    </div>
+
+                    <div class="divcadastrologin">
+                        <button class="btncadastrar">Finalizar cadastro</button>
+                        <span>Já possui uma conta? <a href="">Faça login</a></span>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>

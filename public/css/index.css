@@ -61,7 +61,7 @@ header .text-side .cta {
 header .bg {
     width: 50%;
     overflow-x: hidden;
-    background-image: url("../images/background-video.png");
+    background-image: url("../assets/images/background-video.png");
     height: 100vh;
     position: absolute;
     z-index: 1;
@@ -291,23 +291,23 @@ main .features .card .title p {
 }
 
 main .features #card1 {
-    background-image: url("../images/vista-frontal-trabalhador-com-capacete-e-mascara-protetora.avif");
+    background-image: url("../assets/images/vista-frontal-trabalhador-com-capacete-e-mascara-protetora.avif");
     background-size: cover;
 }
 
 main .features #card2 {
-    background-image: url("../images/trabalhador-sexo-masculino-operando-maquinas-na-fabrica.avif");
+    background-image: url("../assets/images/trabalhador-sexo-masculino-operando-maquinas-na-fabrica.avif");
     background-size: cover;
     background-position: center;
 }
 
 main .features #card3 {
-    background-image: url("../images/avos-aprendendo-usar-o-dispositivo-digital.avif");
+    background-image: url("../assets/images/avos-aprendendo-usar-o-dispositivo-digital.avif");
     background-size: cover;
 }
 
 main .features #card4 {
-    background-image: url("../images/pexels-mikhail-nilov-8943269.avif");
+    background-image: url("../assets/images/pexels-mikhail-nilov-8943269.avif");
     background-size: cover;
     background-position: center;
 }
@@ -672,7 +672,7 @@ main .contact .container {
 
 main .contact .image {
     width: 600px;
-    background-image: url("../images/tecnico.avif");
+    background-image: url("../assets/images/tecnico.avif");
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;

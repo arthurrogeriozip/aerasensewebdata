@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
-@import url("../marley/aerasense/public/assets/css/default.css");
+@import url("default.css");
 * {
     font-family: "Kanit", sans-serif;
 }
@@ -146,8 +146,8 @@ nav #register a:hover {
     
 }
 .image img{
-    width: 40%;
-    height: 40%;
+    width: 20%;
+    height: auto;
     margin-bottom: 0.1%;
 }
 

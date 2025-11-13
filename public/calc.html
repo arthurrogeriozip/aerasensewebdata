@@ -1,0 +1,1127 @@
+<!doctype html>
+<html>
+    <head>
+        <!--HTML Meta Tags-->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Marley de S. Santos" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <!--ChartJS-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="css/calc.css" />
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--Favicon-->
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/icons/favicon.ico"
+        />
+
+        <title>Calculadora</title>
+    </head>
+
+    <body>
+        <header>
+            <!--Navbar-->
+            <nav id="navbar">
+                <!--Links-->
+                <div class="links-area">
+                    <!--List links-->
+                    <ul>
+                        <li>
+                            <!--Logo-->
+                            <div class="logo-area">
+                                <a href="index.html">
+                                    <!--Logo SVG-->
+                                    <svg
+                                        width="730"
+                                        height="216"
+                                        viewBox="0 0 730 216"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g>
+                                            <path
+                                                id="path"
+                                                d="M30.375 159.841Q23.9062 159.841 18.3516 157.556Q12.832 155.236 9.49219 150.56Q6.1875 145.884 6.1875 138.959Q6.1875 129.185 12.8672 123.209Q19.582 117.232 33.5391 117.232L55.4414 117.232L55.4414 114.209Q55.4414 109.287 53.9297 106.404Q52.418 103.521 48.4453 102.255Q44.5078 100.955 36.8789 100.955Q24.7852 100.955 14.2734 104.541L14.2734 92.8687Q18.8789 91.0055 25.4883 89.8805Q32.0977 88.7203 39.7266 88.7203Q54.7031 88.7203 62.543 94.7672Q70.418 100.814 70.418 114.49L70.418 158.4L57.0234 158.4L56.0039 151.474Q51.8555 155.517 45.7031 157.697Q39.5859 159.841 30.375 159.841ZM34.5586 148.591Q41.625 148.591 46.8633 146.236Q52.1367 143.845 55.4414 139.837L55.4414 127.884L33.8555 127.884Q26.9297 127.884 23.8359 130.556Q20.7422 133.193 20.7422 138.677Q20.7422 143.986 24.3281 146.306Q27.9492 148.591 34.5586 148.591ZM122.397 159.841Q104.538 159.841 94.7289 151.052Q84.9555 142.263 84.9555 124.123Q84.9555 107.705 93.2875 98.2125Q101.655 88.7203 118.67 88.7203Q134.209 88.7203 142.049 96.8414Q149.889 104.962 149.889 117.795L149.889 130.451L99.9321 130.451Q101.092 140.4 107.139 144.162Q113.186 147.888 125.561 147.888Q130.764 147.888 136.213 146.904Q141.698 145.884 145.741 144.302L145.741 155.798Q141.135 157.837 135.159 158.822Q129.182 159.841 122.397 159.841ZM99.9321 120.255L136.073 120.255L136.073 115.474Q136.073 108.443 132.17 104.47Q128.303 100.498 119.092 100.498Q108.159 100.498 104.045 105.279Q99.9321 110.025 99.9321 120.255ZM165.166 158.4L165.166 90.1266L179.58 90.1266L180.424 98.0719Q185.311 94.9078 192.096 92.3062Q198.881 89.7047 205.491 88.7203L205.491 100.673Q201.448 101.377 196.772 102.748Q192.096 104.119 187.912 105.771Q183.729 107.423 180.881 109.146L180.881 158.4L165.166 158.4ZM233.847 159.841Q227.378 159.841 221.824 157.556Q216.304 155.236 212.964 150.56Q209.659 145.884 209.659 138.959Q209.659 129.185 216.339 123.209Q223.054 117.232 237.011 117.232L258.913 117.232L258.913 114.209Q258.913 109.287 257.402 106.404Q255.89 103.521 251.917 102.255Q247.98 100.955 240.351 100.955Q228.257 100.955 217.745 104.541L217.745 92.8687Q222.351 91.0055 228.96 89.8805Q235.57 88.7203 243.199 88.7203Q258.175 88.7203 266.015 94.7672Q273.89 100.814 273.89 114.49L273.89 158.4L260.495 158.4L259.476 151.474Q255.327 155.517 249.175 157.697Q243.058 159.841 233.847 159.841ZM238.031 148.591Q245.097 148.591 250.335 146.236Q255.609 143.845 258.913 139.837L258.913 127.884L237.327 127.884Q230.402 127.884 227.308 130.556Q224.214 133.193 224.214 138.677Q224.214 143.986 227.8 146.306Q231.421 148.591 238.031 148.591ZM314.056 159.841Q307.025 159.841 300.592 158.822Q294.193 157.837 290.01 156.396L290.01 143.142Q294.896 145.005 300.802 146.025Q306.709 147.009 312.052 147.009Q320.103 147.009 323.549 145.568Q327.029 144.127 327.029 139.978Q327.029 136.955 324.92 135.232Q322.845 133.474 318.732 132.033Q314.654 130.591 308.291 128.587Q302.244 126.584 297.779 124.228Q293.314 121.837 290.853 118.111Q288.427 114.349 288.427 108.302Q288.427 98.9156 295.177 93.818Q301.963 88.7203 316.939 88.7203Q322.845 88.7203 328.154 89.5992Q333.498 90.443 337.26 91.7437L337.26 104.822Q333.217 103.24 328.4 102.396Q323.584 101.517 319.4 101.517Q311.912 101.517 308.08 102.818Q304.283 104.119 304.283 107.986Q304.283 112.029 308.22 113.681Q312.193 115.334 320.982 118.216Q329.033 120.677 333.779 123.42Q338.56 126.127 340.635 129.959Q342.709 133.791 342.709 139.837Q342.709 149.892 335.361 154.884Q328.049 159.841 314.056 159.841ZM390.525 159.841Q372.666 159.841 362.857 151.052Q353.083 142.263 353.083 124.123Q353.083 107.705 361.416 98.2125Q369.783 88.7203 386.798 88.7203Q402.337 88.7203 410.177 96.8414Q418.017 104.962 418.017 117.795L418.017 130.451L368.06 130.451Q369.22 140.4 375.267 144.162Q381.314 147.888 393.689 147.888Q398.892 147.888 404.341 146.904Q409.826 145.884 413.869 144.302L413.869 155.798Q409.263 157.837 403.287 158.822Q397.31 159.841 390.525 159.841ZM368.06 120.255L404.201 120.255L404.201 115.474Q404.201 108.443 400.298 104.47Q396.431 100.498 387.22 100.498Q376.287 100.498 372.173 105.279Q368.06 110.025 368.06 120.255ZM433.294 158.4L433.294 90.1266L447.708 90.1266L448.411 97.3336Q453.017 93.7477 459.415 91.2516Q465.849 88.7203 473.619 88.7203Q486.872 88.7203 492.919 94.9078Q498.966 101.095 498.966 114.209L498.966 158.4L483.392 158.4L483.392 114.912Q483.392 107.002 480.158 103.837Q476.923 100.673 467.994 100.673Q462.685 100.673 457.552 102.818Q452.454 104.962 449.009 108.443L449.009 158.4L433.294 158.4ZM539.272 159.841Q532.241 159.841 525.808 158.822Q519.409 157.837 515.226 156.396L515.226 143.142Q520.112 145.005 526.018 146.025Q531.925 147.009 537.268 147.009Q545.319 147.009 548.765 145.568Q552.245 144.127 552.245 139.978Q552.245 136.955 550.136 135.232Q548.061 133.474 543.948 132.033Q539.87 130.591 533.507 128.587Q527.46 126.584 522.995 124.228Q518.53 121.837 516.069 118.111Q513.643 114.349 513.643 108.302Q513.643 98.9156 520.393 93.818Q527.179 88.7203 542.155 88.7203Q548.061 88.7203 553.37 89.5992Q558.714 90.443 562.476 91.7437L562.476 104.822Q558.433 103.24 553.616 102.396Q548.8 101.517 544.616 101.517Q537.128 101.517 533.296 102.818Q529.499 104.119 529.499 107.986Q529.499 112.029 533.436 113.681Q537.409 115.334 546.198 118.216Q554.249 120.677 558.995 123.42Q563.776 126.127 565.851 129.959Q567.925 133.791 567.925 139.837Q567.925 149.892 560.577 154.884Q553.265 159.841 539.272 159.841ZM615.741 159.841Q597.882 159.841 588.073 151.052Q578.299 142.263 578.299 124.123Q578.299 107.705 586.632 98.2125Q594.999 88.7203 612.014 88.7203Q627.553 88.7203 635.393 96.8414Q643.233 104.962 643.233 117.795L643.233 130.451L593.276 130.451Q594.436 140.4 600.483 144.162Q606.53 147.888 618.905 147.888Q624.108 147.888 629.557 146.904Q635.042 145.884 639.085 144.302L639.085 155.798Q634.479 157.837 628.503 158.822Q622.526 159.841 615.741 159.841ZM593.276 120.255L629.417 120.255L629.417 115.474Q629.417 108.443 625.514 104.47Q621.647 100.498 612.436 100.498Q601.503 100.498 597.389 105.279Q593.276 110.025 593.276 120.255Z"
+                                                fill="#ffffff"
+                                            />
+                                            <g transform="translate(624 2)">
+                                                <path
+                                                    d="M0 0C43.9066 0 79.5 35.5934 79.5 79.5"
+                                                    fill="none"
+                                                    stroke-width="10"
+                                                    stroke="#3B9DDC"
+                                                    transform="translate(13.25 13.25)"
+                                                />
+                                                <path
+                                                    d="M0 0C29.2711 0 53 23.7289 53 53"
+                                                    fill="none"
+                                                    stroke-width="10"
+                                                    stroke="#3B9DDC"
+                                                    transform="translate(13.25 39.75)"
+                                                />
+                                                <path
+                                                    d="M0 0C14.6355 0 26.5 11.8645 26.5 26.5"
+                                                    fill="none"
+                                                    stroke-width="10"
+                                                    stroke="#3B9DDC"
+                                                    transform="translate(13.25 66.25)"
+                                                />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="index.html" id="inicio">Início</a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#produtos-s"
+                                id="produtos"
+                                >Produtos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="sobrenos.html" id="quem-somos"
+                                >Quem somos</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#work"
+                                id="trabalhe-conosco"
+                                >Trabalhe conosco</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#contact"
+                                id="contato"
+                                >Contato</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <!--Switch language-->
+                    <div>
+                        <select id="select_language">
+                            <option value="pt-br" selected>
+                                <span>🇧🇷</span>
+                                <span>PT-BR</span>
+                            </option>
+                            <option value="en-us">
+                                <span>🇺🇸</span>
+                                <span>EN-US</span>
+                            </option>
+                            <option value="es-eu">
+                                <span>🇪🇸</span>
+                                <span>ES-EU</span>
+                            </option>
+                        </select>
+                    </div>
+
+                    <!--Login-->
+                    <div id="login">
+                        <!--<a href="../../pedro/login.html">Login</a>-->
+                        <a href="login.html">Login</a>
+                    </div>
+
+                    <!--Register-->
+                    <div id="register">
+                        <a href="cadastro.html"
+                            >Cadastre-se</a
+                        >
+                    </div>
+                </div>
+            </nav>
+
+            <div id="mapa"></div>
+
+            <section class="risco">
+                <div class="container">
+                    <div class="title">
+                        <h2>
+                            Um risco <span>silencioso</span> na sua cozinha
+                            industrial
+                        </h2>
+                        <div>
+                            <p>
+                                Uma análise de dados sobre vazamento de Gás GLP
+                                no Brasil.
+                            </p>
+                            <span id="data"
+                                >Fonte: Dados a partir do Corpo de Bombeiros do
+                                Estado de São Paulo. Embora nem todas as
+                                ocorrências sejam em cozinhas, o númeoro ilustra
+                                uma alta frequência de incidentes com GLP.</span
+                            >
+                        </div>
+                    </div>
+                    <div class="number">
+                        <div class="card">
+                            <span>+5000</span>
+                            <span
+                                >Ocorrências anuais envolvendo Gás GLP atendidas
+                                pelo corpo de bombeiros do Estado de São
+                                Paulo</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <section class="where-problems">
+            <div class="container">
+                <div class="title">
+                    <h2>
+                        De onde vem o <span>perigo</span>? As causas raízes dos
+                        <span>vazamentos</span>
+                    </h2>
+                    <div>
+                        <p>
+                            Vazamentos de gás raramente acontecem de forma
+                            espontânea. Eles são resultados de falhas
+                            previsíveis em equipamentos e processos. Compreender
+                            as causas é o primeiro passo para a prevenção
+                            eficaz.
+                        </p>
+                        <span id="data"
+                            >Fonte: Dados a partir do Corpo de Bombeiros do
+                            Estado de São Paulo. Embora nem todas as ocorrências
+                            sejam em cozinhas, o númeoro ilustra uma alta
+                            frequência de incidentes com GLP.</span
+                        >
+                    </div>
+                </div>
+                <div class="number">
+                    <div class="card">
+                        <canvas id="causas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="main">
+            <section class="escalada">
+                <div class="title">
+                    <h2>
+                        Como funciona a <span>rápida escalada</span> do
+                        vazamento
+                    </h2>
+                    <div class="line">
+                        <p>
+                            Um pequeno vazamento GLP pode atingir uma
+                            concentração explosiva em minutos. O Gás é mais
+                            pesado que o ar, e por isso se acumula em níveis
+                            mais baixos, esperando silenciosamente por uma fonte
+                            de ignição.
+                        </p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="items">
+                        <span>1</span>
+                        <p>Vazamento inicia</p>
+                        <span
+                            >Pode ser uma pequena falha na mangueira de
+                            conexão</span
+                        >
+                    </div>
+
+                    <div class="divisor"></div>
+
+                    <div class="items">
+                        <span>2</span>
+                        <p>Concentração perigosa</p>
+                        <span
+                            >A concentração atinge o Limite Inferior de
+                            Explosividade (LEL)</span
+                        >
+                    </div>
+
+                    <div class="divisor"></div>
+
+                    <div class="items">
+                        <span>3</span>
+                        <p>Fonte de ignição</p>
+                        <span
+                            >Chama piloto, faísca de motor ou interruptor</span
+                        >
+                    </div>
+
+                    <div class="divisor"></div>
+
+                    <div class="items">
+                        <span>4</span>
+                        <p>Incêndio/Explosão</p>
+                        <span
+                            >Pode ocorrer resultados devastadores e
+                            irreverssíveis</span
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section class="calcule">
+                <div class="title">
+                    <h2>
+                        Já pensou no <span>risco </span> que a sua cozinha
+                        possui?
+                    </h2>
+                    <h4>Faça uma simulação:</h4>
+                </div>
+                <div class="container">
+                    <div class="inputs">
+                        <label for="input_faturamento_medio_mensal"
+                            >Faturamento médio mensal (R$)</label
+                        >
+                        <input
+                            type="number"
+                            id="input_faturamento_medio_mensal"
+                            placeholder="Digite um faturamento médio mensal"
+                        />
+                    </div>
+                    <div class="inputs">
+                        <label for="input_area_cozinha"
+                            >Área da cozinha (m²)</label
+                        >
+                        <input
+                            type="number"
+                            id="input_area_cozinha"
+                            placeholder="Digite o valor em m²"
+                        />
+                    </div>
+                    <div class="inputs">
+                        <label for="input_altura_cozinha"
+                            >Altura da cozinha em m</label
+                        >
+                        <input
+                            type="number"
+                            id="input_altura_cozinha"
+                            placeholder="Digite o valor em metros"
+                        />
+                    </div>
+
+                    <div class="inputs">
+                        <label for="input_valor_ativo"
+                            >Valor de ativos físicos da empresa (R$)</label
+                        >
+                        <input
+                            type="number"
+                            id="input_valor_ativo"
+                            placeholder="Total como equipamentos, máquinas, mobílias, bens materiais"
+                        />
+                    </div>
+
+                    <div class="inputs">
+                        <label for="input_vazao">Possui seguro incêndio?</label>
+                        <select id="select_possui_seguro">
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="inputs">
+                        <label for="input_vazao"
+                            >Simule o vazão do gás
+                            <span id="vazao"></span> (m³/h)</label
+                        >
+                        <input
+                            type="range"
+                            id="input_vazao"
+                            min="0.00"
+                            max="5"
+                            step="0.1"
+                            value="1"
+                            oninput="atualizarVazao()"
+                        />
+                    </div>
+
+                    <div class="inputs buttons">
+                        <button onclick="simularCenario()" id="btn_adicionar">
+                            +10 min de vazamento
+                        </button>
+                        <button onclick="zerar()">Zerar</button>
+                    </div>
+                </div>
+
+                <div id="div_resultado"></div>
+            </section>
+
+            <section class="real" id="real" style="display: none">
+                <div class="container">
+                    <div class="title">
+                        <h2>
+                            O <span>Custo Real </span>de um acidente: Muito Além
+                            do Fogo
+                        </h2>
+                        <div>
+                            <p>
+                                Vazamentos de gás raramente acontecem de forma
+                                espontânea. Eles são resultados de falhas
+                                previsíveis em equipamentos e processos.
+                                Compreender as causas é o primeiro passo para a
+                                prevenção eficaz.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <div class="grafico-container">
+                            <span class="title-grafic">Impacto Financeiro</span>
+                            <canvas
+                                id="impactos"
+                                style="
+                                    width: 50%;
+                                    max-width: 550px;
+                                    height: 50%;
+                                    max-height: 550px;
+                                "
+                            ></canvas>
+                        </div>
+
+                        <div class="custos-int">
+                            <div>
+                                <span class="title-cust"
+                                    >Custos Intangíveis</span
+                                >
+                                <div class="cards">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img
+                                                src="assets/icons/coracao.svg"
+                                                alt=""
+                                            />
+                                        </div>
+
+                                        <div class="content">
+                                            <span class="title-card"
+                                                >Vidas em Risco</span
+                                            >
+                                            <p>
+                                                A segurança dos seus
+                                                colaboradores é o ativo mais
+                                                valioso
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="image">
+                                            <img
+                                                src="assets/icons/perda.svg"
+                                                alt=""
+                                            />
+                                        </div>
+
+                                        <div class="content">
+                                            <span class="title-card"
+                                                >Perda de Credibilidade</span
+                                            >
+                                            <p>
+                                                A confiança do mercado e dos
+                                                clientes pode ser abalada
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="image">
+                                            <img
+                                                src="assets/icons/jou.svg"
+                                                alt=""
+                                            />
+                                        </div>
+
+                                        <div class="content">
+                                            <span class="title-card"
+                                                >Publicidade Negativa</span
+                                            >
+                                            <p>
+                                                Um único acidente pode manchar a
+                                                imagem da sua marca
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="details" id="datails" style="display: none">
+                <div class="container">
+                    <div class="title">
+                        <h2>
+                            A Detecção Precoce: A <span>Diferença</span> Entre
+                            um Alerta e um Acidente
+                        </h2>
+                        <div>
+                            <p>
+                                A Tecnologia da Aerasense é capaz de de forma
+                                eficaz rapidamente: nos segundos iniciais do
+                                vazamento. Veja uma comparação
+                            </p>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <div class="cards" id="sem_sensor">
+                            <div class="title" id="sem">Cenário SEM Sensor</div>
+                            <div class="list">
+                                <ul>
+                                    <li><span>T+0s:</span> Vazamento inicia</li>
+                                    <li>
+                                        <span>T+10min:</span> Gás atinge uma
+                                        concentração perigosa.
+                                    </li>
+                                    <li>
+                                        <span>T+15min:</span> Vazamento pode ser
+                                        notado pelo cheiro, mas talvez seja
+                                        tarde demais. Pode ser notado confusão
+                                        mental, tonturas e náuseas.
+                                    </li>
+                                    <li>
+                                        <span>T+??:</span> Ignição acidental
+                                        leva a uma explosão
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards" id="com_sensor">
+                            <div class="title" id="com">Cenário COM Sensor</div>
+                            <div class="">
+                                <ul>
+                                    <li><span>T+0s:</span> Vazamento inicia</li>
+                                    <li>
+                                        <span>T+10s:</span> Sensor detecta e
+                                        dispara um alarme na área da dashboard
+                                    </li>
+                                    <li>
+                                        <span>T+30s:</span> Equipe é alertada e
+                                        evacua rapidamente a área com segurança.
+                                        Incidente é evitado
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div class="itens">
+                <div class="logo-area">
+                    <img
+                        src="assets/images/footer-logo.png"
+                        alt="Logo"
+                    />
+                    <p>
+                        Aerasense é uma empresa brasileira de tecnologia de
+                        sensores GLP<br />
+                        <span>#aerasense #ehdobrasil #sensorgas</span>
+                    </p>
+                    <span>
+                        <a href="#"
+                            >Rua Girassol, 1234 - Vila Madalena, São Paulo - SP,
+                            <br />03955-202</a
+                        >
+                    </span>
+                </div>
+
+                <!--Links-->
+                <div class="links">
+                    <div class="item">
+                        <h3>Institucional</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Contato</a>
+                            </li>
+                            <li>
+                                <a href="#">Recomendar a Aerasense</a>
+                            </li>
+                            <li>
+                                <a href="#">Trabalhe conosco</a>
+                            </li>
+                            <li>
+                                <a href="#">Simulador</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Política de cookies</a>
+                            </li>
+                            <li>
+                                <a href="#">Política de privacidade</a>
+                            </li>
+                            <li>
+                                <a href="#">Termos de serviço</a>
+                            </li>
+                            <li>
+                                <a href="#">LGPD</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <h3>Contato</h3>
+                        <ul>
+                            <li>
+                                <a href="tel:11912345678">
+                                    <img
+                                        src="assets/icons/whatsapp-svgrepo-com.svg"
+                                        alt=""
+                                    />
+                                    <span>(11) 91234-5678 - Vendas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:11934565678">
+                                    <img
+                                        src="assets/icons/whatsapp-svgrepo-com.svg"
+                                        alt=""
+                                    />
+                                    <span>(11) 93456-5678 - Suporte</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:08001235678">
+                                    <img
+                                        src="assets/icons/tel.svg"
+                                        alt=""
+                                    />
+                                    <span>0800 123 5678 - SAC</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mailto:contato@aerasense.com">
+                                    <img
+                                        src="assets/icons/email-svgrepo-com.svg"
+                                        alt=""
+                                    />
+                                    <span>contato@aerasense.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="other">
+                <div class="newsletter">
+                    <form>
+                        <div class="box">
+                            <label for="input_email_newsletter"
+                                >Assine nossa newsletter</label
+                            >
+                            <input
+                                type="email"
+                                autocomplete="email"
+                                id="input_email_newsletter"
+                                placeholder="seuemail@mail.com"
+                            />
+                            <div class="check">
+                                <input type="checkbox" id="accept" />
+                                <label for="accept"
+                                    >Aceito receber informações, notícias e
+                                    promoções.</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="button">
+                            <button type="submit">Assinar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Social-->
+                <div class="social">
+                    <h2>Siga-nos nas redes sociais</h2>
+                    <div class="links-social">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img
+                                        src="assets/icons/linkedin.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img
+                                        src="assets/icons/instagram.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img
+                                        src="assets/icons/facebook.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img
+                                        src="assets/icons/x.png"
+                                        alt=""
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img
+                                        src="assets/icons/github.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--Copyright-->
+        <div class="copyright">
+            <span
+                >&COPY; 2025 · aerasense tecnologia ltda · todos os direitos
+                reservados · cnpj: 08.640.503/0001-33</span
+            >
+        </div>
+
+        <!--Simulador (Calculadora)-->
+        <script>
+            // div que exibe o resultado final ao usuário
+            var resultado = div_resultado;
+
+            // Div com informações sobre custo de perdas
+            var custoReal = document.getElementById("datails");
+
+            // Div com comparativo de tempo de detecção
+            var comparativo = document.getElementById("real");
+
+            // Limite Inferior de Inflamabilidade GLP (% vol) - Constante
+            var lelGLP = 2; // 2% vol = 100% do LEL - Padrão para sensores de gás, geralmente
+
+            // Contagem de minutos (somado a cada 10 min)
+            var contagemMinutos = 0;
+
+            // ID da div para mostrar o valor do Vazão
+            var vazaoMostrar = vazao;
+
+            // Botão de adicionar tempo
+            var adicionarTempo = btn_adicionar;
+
+            var vazaoDisplay = document.getElementById("vazao");
+
+            var input_vazao = document.getElementById("input_vazao");
+
+            // Atualizar vazão de Gás
+            function atualizarVazao() {
+                var valorAtual = input_vazao.value;
+
+                if (vazaoDisplay) {
+                    vazaoDisplay.innerHTML = valorAtual;
+                }
+
+                console.log(
+                    "Vazão atualizada (display):",
+                    vazaoDisplay.innerHTML,
+                );
+            }
+
+            // Valores de custo - Chart
+            const valoresCusto = [0, 0, 0];
+
+            // Zerar valores
+            function zerar() {
+                valoresCusto[0] = 0;
+                valoresCusto[1] = 0;
+                valoresCusto[2] = 0;
+
+                contagemMinutos = 0;
+
+                if (custoReal) custoReal.style.display = "none";
+                if (comparativo) comparativo.style.display = "none";
+
+                if (resultado) resultado.innerHTML = "";
+
+                adicionarTempo.disabled = false;
+                adicionarTempo.style.backgroundColor =
+                    "var(--color-bright-blue)";
+            }
+
+            // Função de simular o cenário
+            function simularCenario() {
+                // Soma 10 min
+                contagemMinutos += 10;
+
+                // Faturamento médio mensal
+                var faturamentoMedioMensal = Number(
+                    input_faturamento_medio_mensal.value,
+                );
+
+                // Área da cozinha em m²
+                var areaCozinha = Number(input_area_cozinha.value);
+
+                // Altura em m da cozinha
+                var alturaCozinha = Number(input_altura_cozinha.value);
+
+                // Se possui seguro incêndio (0 para Não e 1 para Sim)
+                var possuiSeguroIncendio = Number(select_possui_seguro.value);
+
+                // Valor de ativos físicos da empresa (equipamentos, mobílias, máquinas, bens materiais no geral do local, etc)
+                var valorAtivoFisicoEmpresa = Number(input_valor_ativo.value);
+
+                // Idade Média de um Funcionário (anos)
+                // (Cozinheiro Industrial - Salário Brasil)
+                // Fonte: https://www.salario.com.br/profissao/cozinheiro-industrial-cbo-513215/)
+                var idadeMediaFuncionario = 42;
+
+                // Salário Médio (Cozinheiro Industrial - Salário Brasil)
+                // Fonte: https://www.salario.com.br/profissao/cozinheiro-industrial-cbo-513215/)
+                var salarioMedioFuncionario = 2071.15;
+
+                // Expectativa de Vida Média do Brasileiro (anos)
+                // Fonte: https://www.cnnbrasil.com.br/saude/brasileiros-acreditam-que-vao-viver-ate-os-80-anos-mostra-pesquisa/
+                var expectativaDeVidaBrasileiro = 76.4;
+
+                // Volume total do ambiente da cozinha (m³)
+                var volumeTotalAmbiente = areaCozinha * alturaCozinha;
+
+                // Taxa de vazão de GLP (m³/h)
+                var taxaVazaoDeGas = Number(input_vazao.value);
+
+                vazao.innerHTML = taxaVazaoDeGas;
+
+                // Valida se os campos não estão zerados
+                if (
+                    alturaCozinha <= 0 ||
+                    areaCozinha <= 0 ||
+                    taxaVazaoDeGas <= 0
+                ) {
+                    alert("Insira valores válidos\n\nDeve ser maior que 0!");
+                    adicionarTempo.disabled = true;
+                    adicionarTempo.style.backgroundColor = "#dcdcdc";
+                } else {
+                    adicionarTempo.disabled = false;
+                    adicionarTempo.style.backgroundColor =
+                        "var(--color-bright-blue)";
+
+                    // Tempo de vazamento em Horas
+                    var tempoVazamentoEmHoras = contagemMinutos / 60;
+
+                    // Volume do Gás Acumulado (m³)
+                    var volumeGasAcumulado =
+                        taxaVazaoDeGas * tempoVazamentoEmHoras;
+
+                    // Concentração do Gás em (% vol)
+                    var concentracaoVol =
+                        (volumeGasAcumulado / volumeTotalAmbiente) * 100;
+
+                    // LEL Atual (% LEL)
+                    var lelAtual = (concentracaoVol / lelGLP) * 100;
+
+                    // Define que o % LEL deve ser igual a 100 no máximo
+                    if (lelAtual > 100) {
+                        lelAtual = 100;
+                    }
+
+                    // Cálculo base de valor de idenização por Morte/Invalidez de 1 funcionário
+                    var idenizacaoBaseFuncionario =
+                        (expectativaDeVidaBrasileiro - idadeMediaFuncionario) *
+                        salarioMedioFuncionario *
+                        13;
+
+                    // Faixa de Idenização - Pode ser de 5 a 80 por cento do potencial de vida perdido
+                    var idenizacaoMinima = idenizacaoBaseFuncionario * 0.05;
+                    var idenizacaoMaxima = idenizacaoBaseFuncionario * 0.8;
+
+                    var perdasReceita = faturamentoMedioMensal;
+
+                    // Multas e processos (valor estimado de 75% do valor do faturamento)
+                    var multas = 0.75 * faturamentoMedioMensal;
+
+                    // Fator de Seguro Incêndio
+                    var fatorSeguro = 0;
+
+                    // Atribui os fatores de seguro incêndio
+                    if (possuiSeguroIncendio == 1) {
+                        fatorSeguro = 0.2; // Define 20% de fator de danos à propriedade caso possua seguro
+                    } else {
+                        fatorSeguro = 1; // Define 100% de fator de danos à propriedade caso não possua seguro
+                    }
+
+                    // Danos à propriedade
+                    var danosPropriedade =
+                        valorAtivoFisicoEmpresa * fatorSeguro;
+
+                    // Impacto Financeiro
+                    var valorImpacto =
+                        multas + perdasReceita + danosPropriedade;
+
+                    // Pontos de Risco
+                    var pontuacaoRisco = 1;
+
+                    // A Pontuação de Risco varia de acordo com o % LEL
+                    // O fator de risco multiplica o valor de danos à propriedade para aumentar o valor de possível prejuízo
+                    if (lelAtual >= 100) {
+                        pontuacaoRisco = 20;
+                        fatorRisco = 1;
+                    } else if (lelAtual >= 50) {
+                        pontuacaoRisco = 15;
+                        fatorRisco = 0.75;
+                    } else if (lelAtual >= 20) {
+                        pontuacaoRisco = 10;
+                        fatorRisco = 0.5;
+                    } else if (lelAtual >= 10) {
+                        pontuacaoRisco = 5;
+                        fatorRisco = 0.25;
+                    } else {
+                        pontuacaoRisco = 1;
+                        fatorRisco = 0.05;
+                    }
+
+                    var estiloRisco = "";
+
+                    if (pontuacaoRisco <= 20 && pontuacaoRisco >= 15) {
+                        estiloRisco = ` <span style="font-size: 1.5rem; color: var(--color-danger)">${pontuacaoRisco}</span>`;
+                    } else if (pontuacaoRisco <= 15 && pontuacaoRisco >= 10) {
+                        estiloRisco = ` <span style="font-size: 1.5rem; color: #FDC700">${pontuacaoRisco}</span>`;
+                    } else {
+                        estiloRisco = ` <span style="font-size: 1.5rem; color: #007595">${pontuacaoRisco}</span>`;
+                    }
+
+                    resultado.innerHTML = `
+                      <div class="resultado">
+                          <p><b>Tempo Acumulado:</b> ${contagemMinutos} minutos</p><br>
+                          <p><b>Nível LEL Atual:</b> ${lelAtual.toFixed(2)}%</p><br>
+                          <p><b>Pontuação de Risco (1 a 20):</b> ${estiloRisco}</p><br>
+                      </div>
+                      `;
+                    console.log("OK");
+
+                    // Exibe os resultados
+                    custoReal.style.display = "block";
+                    comparativo.style.display = "block";
+
+                    valoresCusto[0] = danosPropriedade * fatorRisco;
+                    valoresCusto[1] = perdasReceita * fatorRisco;
+                    valoresCusto[2] =
+                        valoresCusto[0] + valoresCusto[1] + multas * fatorRisco;
+
+                    console.log(danosPropriedade);
+
+                    console.log(pontuacaoRisco);
+                }
+            }
+        </script>
+
+        <!--Simulator-->
+        <!--<script>
+            var result = div_result;
+
+            var resultado = document.getElementById("datails");
+            var realidade = document.getElementById("real");
+
+            var valorVazao = vazao;
+
+            function simular() {
+                var vazaoGas = Number(input_vazao.value);
+
+                // Faturamento Médio Mensal
+                var faturamentoMedioMensal = Number(
+                    input_faturamento_medio_mensal.value,
+                );
+
+                // Quantidade de Funcionários
+                var quantidadeFuncionarios = Number(
+                    input_quantidade_funcionarios.value,
+                );
+
+                // Idade Média de um Funcionário (anos)
+                // (Cozinheiro Industrial - Salário Brasil)
+                // Fonte: https://www.salario.com.br/profissao/cozinheiro-industrial-cbo-513215/)
+                var idadeMediaFuncionario = 42;
+
+                // Expectativa de Vida Média do Brasileiro (anos)
+                // Fonte: https://www.cnnbrasil.com.br/saude/brasileiros-acreditam-que-vao-viver-ate-os-80-anos-mostra-pesquisa/
+                var expectativaDeVidaBrasileiro = 76.4;
+
+                // Salário Médio (Cozinheiro Industrial - Salário Brasil)
+                // Fonte: https://www.salario.com.br/profissao/cozinheiro-industrial-cbo-513215/)
+                var salarioMedio = 2071.15;
+
+                // Valor de indenização em simulação de um acidente que comprometeu
+                // a mobilidade do pulso do trabalhador, envolvendo incêndio o explosão
+                // Fonte:
+                var valorIdenizacaoBase =
+                    (expectativaDeVidaBrasileiro - idadeMediaFuncionario) *
+                    salarioMedio;
+
+                // Pé direito da cozinha
+                var peDireitoCozinha = Number(input_pe_direito_cozinha.value);
+
+                // Área da cozinha
+                var areaCozinha = Number(input_area_cozinha.value);
+
+                // Volume da cozinha em m³
+                var volumeCozinha = peDireitoCozinha * areaCozinha;
+
+                // Um valor mocado de simulação de vazamento de um orifício em uma mangeuira de conexão
+                var taxaVazaoGasEmOrificio = 1.3;
+
+                // Percentual de LEL (Limite Inferior de Explosividade)
+                var lel = taxaVazaoGasEmOrificio / volumeCozinha;
+
+                // Valor de multas base
+                var multas = 0.75 * faturamentoMedioMensal;
+
+                // Perdas de receita em 3 meses
+                var perdasReceita = faturamentoMedioMensal * 3;
+
+                // Valor de danos a propriedade
+                var danosPropriedade = 3 * faturamentoMedioMensal;
+
+                // Valor da perda financeira
+                var valorPerda = multas + perdasReceita + danosPropriedade;
+
+                // Mensagem de indeinzação
+                var msg = `<br>Num cenário de fogo com explosão ou chamas,suas perdas com multas, infraestrutura e perda em receita
+                  podem variar entre R$${Number(valorPerda * 0.1)},00(considerando um cenário de perdas mínimas) e R$${valorPerda},00
+                  (considerando um cenário de danos críticos)<br>
+                  Além disso, você pode ter que gastar muito com indenizações. Considerando a ideade média de um trabalhador da área
+                  de cozinhas industrias (42 anos) e seu salário médio (R$2070), dependendo do grau do ferimento, a indenização pode variar
+                  entre R$${(valorIdenizacaoBase * 0.05).toFixed(2)},00 e R$${(valorIdenizacaoBase * 0.8).toFixed(2)},00, para potencialemente
+                  múltiplos funcionários.`;
+
+                result.innerHTML = msg;
+                resultado.style.display = "block";
+                realidade.style.display = "block";
+                valorVazao.innerHTML = vazaoGas;
+            }
+        </script>-->
+
+        <!--Chart Donut-->
+        <script>
+            const labels = [
+                "Mangueiras/Conexões",
+                "Falha no Regulador de Pressão",
+                "Erro humano",
+                "Instalação incorreta",
+            ];
+
+            const data = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "Principais causas de vazamento: ",
+                        data: [50, 30, 10, 10],
+                        backgroundColor: [
+                            "#3B9EDB",
+                            "#3BD0DB",
+                            "#3B6BDB",
+                            "#47545C",
+                        ],
+                        hoverOffset: 2,
+                    },
+                ],
+            };
+
+            const ctxCausas = "causas";
+
+            const config = {
+                type: "doughnut",
+                data,
+                options: {
+                    indexAxis: "y",
+                    plugins: {
+                        legend: { display: true },
+                        title: {
+                            display: true,
+                            text: "Principais Causas de Vazamento de GLP em %",
+                            font: {
+                                size: 18,
+                                family: "Kanit",
+                            },
+                        },
+                    },
+                },
+            };
+
+            new Chart(ctxCausas, config);
+
+            const xValues = [
+                "Danos à propriedade",
+                "Perda de Receita",
+                "Custos Legais e Multas",
+            ];
+            // const yValues = [60, 49, 44, 24, 15];
+            const barColors = ["#3B9EDB", "#3BD0DB", "#3B6BDB", "#47545C"];
+
+            const ctxImpactos = document.getElementById("impactos");
+
+            new Chart(ctxImpactos, {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [
+                        {
+                            backgroundColor: barColors,
+                            data: valoresCusto,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: "Valores em Reais (R$)",
+                            font: { size: 16 },
+                            position: "bottom",
+                        },
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
