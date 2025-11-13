@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./js/sessao.js"></script>
+     
+    <link rel="stylesheet" href="login.css">
+    <title>Aerasense | Login</title>
+
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="header">
+            <a href="../marley/aerasense/index.html">
+                <img src="assets/logo.svg" alt="Aerasense Logo" class="logo">
+            </a>
+            
+        </div>
+
+
+        <h2 class="titulo">Faça login</h2>
+
+        <div>
+
+            <label>E-mail</label>
+            <input id="ipt_email" class="inputEMAIL" type="email" placeholder="Digite seu E-mail cadastrado">
+
+            <label>Senha</label>
+            <input id="ipt_senha" class="inputSENHA" type="password" placeholder="Digite sua senha cadastrada">
+
+            <!-- <div id="div_mensagemErro" class="mensagemErro">
+                <span>E-mail ou senha incorretos</span>
+            </div> -->
+
+            <div class="recuperarSenha">
+                Não consegue entrar?                 
+                <a href="#">
+                    <u>Recuperar senha</u>
+                </a>
+
+            </div>
+
+            <button onclick="conta()" class="botaoEntrar">Entrar na conta</button>
+
+            <div id="div_mensagem"></div>
+            
+        </div>
+
+        <div class="registro">
+            <span>Não possui cadastro? 
+
+                <a href="../gabriel/TelaCadastro/cadastro.html">
+                    <u>Cadastre-se</u> 
+                </a>
+
+            </span>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 
+<script>
+    
+function conta(){
+    var email = ipt_email.value
+
+    var senha = ipt_senha.value
+
+    var emailSalvo = "clienteAerasense"
+    var senhaSalva = "12345678"
+
+    var mensagem = ""
+    
+    
+    if(email == emailSalvo && senha == senhaSalva){
+        
+        mensagem = "Seja bem-vindo"
+        
+        ipt_email.style.backgroundColor = ""
+    
+    } else {
+        
+        mensagem = "Email ou senha incorretos"
+        
+        ipt_email.style.border = "2px solid red"
+
+        
+ 
+ 
+ 
+ 
+ 
+            }
+
+
+
+
+            div_mensagem.innerHTML = mensagem
+        }
+        
+    
+
+</script> -->
