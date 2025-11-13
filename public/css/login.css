@@ -1,0 +1,216 @@
+/* configuração geral da página */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* logo do site */
+img {
+    width: 370px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* container principal / primaira div do site */
+.main-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* título */
+.titulo {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* inputs para colocar o email e senha */
+label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+
+.inputEMAIL{
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.inputEMAIL.erro{ /* deu erro no email */
+    border-color: #FF3A3A;
+}
+
+.inputSENHA {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.inputSENHA.erro { /* deu erro na senha */
+    border-color: #FF3A3A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* botão pro loign */
+.botaoEntrar{
+    margin-top: 15px;
+    height: 70px;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+    background-color: #3B9EDB;
+    border: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* parte da mensagem de erro no login */
+.mensagemErro {
+    color: #FF3A3A;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* margem e estilo da mensagem */
+#div_mensagem {
+    margin-top: 15px; 
+    font-size: 16px;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* recuperar a senha */
+.recuperarSenha a {
+    color: #3B9EDB;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* parte que te leva para o cadastro / Cadastre-se */
+.registro {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.registro a {
+    color: #3B9EDB;
+    text-decoration: none;
+}
+
+
+

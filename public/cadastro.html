@@ -6,92 +6,80 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AquaTech | Cadastro</title>
+  <title>Aerasense | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
 
-  <link rel="stylesheet" href="./css/estilo.css" />
+  <link rel="stylesheet" href="./css/cadastro.css" />
   <link rel="icon" href="./assets/icon/favicon2.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
 <body onload="listar()">
-  <!--header inicio-->
-  <div class="header">
-    <div class="container">
-      <h1 class="titulo">AquaTech</h1>
-      <ul class="navbar">
-        <li>
-          <a href="index.html">Inicial</a>
-        </li>
-        <li>
-          <a href="simulador.html">Simulador</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li class="agora">
-          <a href="#">Cadastro</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!--header fim-->
+    <div class="main-container">
 
-  <div class="login">
-    <div class="alerta_erro">
-      <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
-      </div>
-    </div>
-    <div class="container">
-      <div class="card card-cadastro">
-        <h2>Bem-vindo!</h2>
-        <div class="formulario">
-          <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-          <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
-          </div>
-          <div class="campo">
-            <span>Nome:</span>
-            <input id="nome_input" type="text" placeholder="Seu nome" />
-          </div>
-          <div class="campo">
-            <span>E-mail:</span>
-            <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
-          </div>
-          <div class="campo">
-            <span>Senha:</span>
-            <input id="senha_input" type="password" placeholder="******" />
-          </div>
-          <div class="campo">
-            <span>Confirmação da Senha:</span>
-            <input id="confirmacao_senha_input" type="password" placeholder="******" />
-          </div>
-          <button class="botao" onclick="cadastrar()">Cadastrar</button>
+        <div class="form-container">
+
+            <div class="header" onclick="FnVoltarPaghome()">
+
+                <img src="assets/logo.svg" alt="" />
+            </div>
+
+            <div onsubmit="FnContinuarCadastro()" class="fomrs">
+                
+                <p class="main-text">Informe os dados da sua <span class="mini-asterisco">empresa</span> e <span
+                        class="mini-asterisco">responsável</span></p>
+
+                <div class="container-nome">
+                    <div class="container-input">
+                        <span class="minitext">Nome <span class="mini-asterisco">*</span></span>
+                        <input type="text" placeholder="Seu Nome" id="input_name" />
+                    </div>
+                    <div class="container-input">
+                        <span class="minitext">Sobrenome <span class="mini-asterisco">*</span></span>
+                        <input type="text" placeholder="Seu Sobrenome" id="input_sobrenome" />
+                    </div>
+                </div>
+
+                <div class="container-nome">
+                    <div class="container-input">
+                        <span class="minitext">Sua empresa <span class="mini-asterisco">*</span></span>
+                        <input type="text" placeholder="Nome da empresa" id="input_empresa" />
+                    </div>
+                    <div class="container-input">
+                        <span class="minitext">CNPJ <span class="mini-asterisco">*</span></span>
+                        <input type="text" placeholder="00.000.000/0001-XX" id="input_CNPJ" oninput="mascaracpnj()" />
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="container-infos">
+                    <div class="container-input">
+                        <span class="minitext">Celular <span class="mini-asterisco">*</span></span>
+                        <input type="text" placeholder="(11) 95746-7475" id="input_celular" oninput="mascaracelular()" />
+                    </div>
+
+                    <div class="container-mensagens-errors">
+                        <span class="Erros" id="ID_Erros"></span>
+                    </div>
+
+                    <div class="divcadastrologin">
+                        <button class="btncadastrar" onclick="FnContinuarCadastro()">Continuar</button>
+                        <span>Já possui uma conta? <a href="login.html">Faça login</a></span>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div>
-
-        <div id="div_erros_login"></div>
-      </div>
+        <img class="imgprincipal" src="https://http2.mlstatic.com/D_NQ_NP_937828-MLB83098144488_032025-O.webp" >
     </div>
-  </div>
 
-  <!--footer inicio-->
-  <div class="footer">
-    <div class="container">
-      <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-      <span class="version">v1.0.0</span>
-    </div>
-  </div>
-  <!--footer fim-->
+
+
 </body>
 
 </html>

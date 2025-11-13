@@ -1,0 +1,46 @@
+/* Root declarations */
+:root {
+    /* Colors */
+    --color-bright-blue: #3b9ddc;
+    --color-dark-blue: #18628d;
+    --color-very-dark-blue: #0a2b40;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-danger: #ff3a3a;
+    --color-success: #41b56b;
+
+    /* Font Family */
+    --font-family: "Kanit", sans-serif;
+
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 600;
+    --font-extrabold: 800;
+}
+
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    cursor: default;
+    background-color: var(--color-white);
+}
+
+/* Select */
+::selection {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+}
+
+/* Interact */
+a,
+button {
+    cursor: pointer;
+}

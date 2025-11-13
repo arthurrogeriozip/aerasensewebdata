@@ -1,0 +1,1055 @@
+/* Import default styles */
+@import url(default.css);
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-very-dark-blue);
+    height: 100vh;
+}
+
+header .header-content {
+    height: 100vh;
+    position: relative;
+    top: 10%;
+}
+
+header .container {
+    display: flex;
+}
+
+header .text-side {
+    width: 50vw;
+    margin: 5% 0% 5% 5%;
+}
+
+header .text-side h3 {
+    color: var(--color-bright-blue);
+    font-family: var(--font-medium);
+}
+
+header .text-side h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-family: var(--font-medium);
+    margin: 15px 0px;
+}
+
+header .text-side p {
+    color: #bdbdbd;
+    margin: 20px 0px;
+}
+
+header .text-side a {
+    color: var(--color-white);
+    background-color: var(--color-bright-blue);
+    padding: 15px 50px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: 180ms ease-in-out;
+}
+
+header .text-side a:hover {
+    opacity: 0.8;
+}
+
+header .text-side .cta {
+    margin: 30px 0px;
+}
+
+header .bg {
+    width: 50%;
+    overflow-x: hidden;
+    background-image: url("../images/background-video.png");
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+header .video-side .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header .video-side video {
+    position: relative;
+    padding: 5% 0% 0% 5%;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--color-very-dark-blue);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    position: fixed;
+    transition: 250ms ease-in-out;
+    z-index: 100;
+}
+
+nav .logo-area {
+    margin-right: 15px;
+}
+
+nav .logo-area svg {
+    width: 150px;
+    height: max-content;
+}
+
+nav .links-area ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav .links-area li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+nav .links-area li a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+nav .links-area li a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-bright-blue);
+    text-decoration-thickness: 2px;
+}
+
+nav .buttons {
+    display: flex;
+    align-items: center;
+}
+
+nav .buttons select {
+    background-color: var(--color-very-dark-blue);
+    border: none;
+    color: var(--color-white);
+    padding: 2px 5px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+nav #login,
+nav #register {
+    display: flex;
+    justify-content: center;
+    margin: 0px 8px;
+}
+
+nav #login a,
+nav #register a {
+    padding: 10px 50px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: 180ms ease-in-out;
+}
+
+nav #login a {
+    color: var(--color-very-dark-blue);
+    background-color: var(--color-white);
+}
+
+nav #register a {
+    color: var(--color-white);
+    background-color: var(--color-bright-blue);
+    border: 1px solid var(--color-bright-blue);
+}
+
+nav #login a:hover {
+    color: var(--color-bright-blue);
+}
+
+nav #register a:hover {
+    color: var(--color-white);
+    opacity: 0.9;
+}
+
+/* Main */
+main {
+    background-color: var(--color-very-dark-blue);
+    height: min-content;
+}
+
+main .companies {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--color-white);
+    padding: 2%;
+    z-index: 20;
+    position: relative;
+    width: 90%;
+    margin: 0% 5%;
+    border-radius: 16px;
+}
+
+main .companies span {
+    color: #777777;
+}
+
+main .companies .logos {
+    display: flex;
+    justify-content: center;
+}
+
+main .companies .image {
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+    transition: 200ms ease-in-out;
+    height: min-content;
+}
+
+main .companies .image:hover {
+    filter: grayscale(0%);
+}
+
+main .companies .logos img {
+    width: 180px;
+}
+
+main .func {
+    margin-top: 8%;
+    padding: 5% 0%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1px solid var(--color-bright-blue);
+    border-top: 1px solid #dcdcdc;
+}
+
+main .func .information {
+    width: 55vw;
+}
+
+main .func span {
+    color: var(--color-bright-blue);
+}
+
+main .func h3 {
+    color: var(--color-bright-blue);
+}
+
+main .func h2 {
+    color: var(--color-very-dark-blue);
+    font-size: 2rem;
+}
+
+main .func .info {
+    width: 20vw;
+}
+
+main .func .info div:nth-child(1) {
+    height: 5px;
+    width: 150px;
+    content: "";
+    border-radius: 5px;
+    background-color: var(--color-very-dark-blue);
+}
+
+main .func .info span {
+    color: var(--color-very-dark-blue);
+}
+
+main .features .card {
+    width: 600px;
+    height: 450px;
+    border-radius: 16px;
+    margin-right: 10px;
+    transition: 300ms ease-in-out;
+}
+
+main .features .card .title {
+    position: relative;
+    z-index: 10;
+    top: 65%;
+    margin: 10px;
+    border-radius: 16px;
+    align-self: flex-end;
+    padding: 5%;
+    background-color: var(--color-very-dark-blue);
+}
+
+main .features .card .title span {
+    color: var(--color-bright-blue);
+    font-weight: var(--font-bold);
+}
+
+main .features .card .title p {
+    color: var(--color-white);
+}
+
+main .features #card1 {
+    background-image: url("../images/vista-frontal-trabalhador-com-capacete-e-mascara-protetora.avif");
+    background-size: cover;
+}
+
+main .features #card2 {
+    background-image: url("../images/trabalhador-sexo-masculino-operando-maquinas-na-fabrica.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+main .features #card3 {
+    background-image: url("../images/avos-aprendendo-usar-o-dispositivo-digital.avif");
+    background-size: cover;
+}
+
+main .features #card4 {
+    background-image: url("../images/pexels-mikhail-nilov-8943269.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+main .features .cards-container {
+    display: flex;
+}
+
+main .features .card img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+main .how {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--color-white);
+    padding: 2%;
+    z-index: 20;
+    position: relative;
+    margin: 0% 5%;
+    border-radius: 16px;
+    height: 100%;
+    margin-top: 5%;
+}
+
+main .how .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .how .center p {
+    margin: 2% 0%;
+    color: var(--color-very-dark-blue);
+}
+
+main .how .center a {
+    padding: 20px 60px;
+    background-color: var(--color-bright-blue);
+    border-radius: 16px;
+    color: var(--color-white);
+    font-weight: medium;
+    text-decoration: none;
+}
+
+main .how .center a {
+    padding: 20px 60px;
+    background-color: var(--color-bright-blue);
+    border-radius: 16px;
+    color: var(--color-white);
+    font-weight: medium;
+    text-decoration: none;
+}
+
+main .how .container .title {
+    width: 100%;
+    padding: 3% 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .how .container .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .how .container .image img {
+    border-radius: 16px;
+    width: 100%;
+}
+
+main .how .container .title h3 {
+    color: var(--color-bright-blue);
+}
+
+main .how .container .title h2 {
+    color: var(--color-very-dark-blue);
+    font-size: 2rem;
+}
+
+main .how .container .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .how .container .line {
+    width: 60%;
+    height: 5px;
+    background-color: var(--color-very-dark-blue);
+    border-radius: 5px;
+}
+
+main .how .container .title .text {
+    color: var(--color-very-dark-blue);
+}
+
+main .products {
+    margin-top: 5%;
+    background-color: var(--color-white);
+}
+
+main #products-s {
+    height: 1px;
+}
+
+main .products .container .title {
+    width: 60%;
+    padding: 3% 5%;
+}
+
+main .products .container .title h3 {
+    color: var(--color-bright-blue);
+    margin-bottom: 10px;
+}
+
+main .products .container .title h2 {
+    color: var(--color-very-dark-blue);
+    font-size: 2rem;
+}
+
+main .products .container .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .products .image {
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 10%;
+}
+
+main .products .image img {
+    width: 50%;
+    margin-right: 150px;
+}
+
+main .products .image .cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+main .products .image .card {
+    padding: 20px 30px;
+    color: var(--color-very-dark-blue);
+    margin: 3% 0%;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(150, 150, 150, 0.8);
+    border-radius: 16px;
+    transition: 200ms ease-in-out;
+}
+
+main .products .image .card:hover {
+    transform: translate(5px, -8px);
+}
+
+main .blog {
+    background-color: var(--color-white);
+    margin-top: 5%;
+    padding: 3% 5%;
+}
+
+main .blog .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .blog .title .only-title {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+main .blog .title .only-title h3 {
+    color: var(--color-bright-blue);
+    margin-bottom: 15px;
+}
+
+main .blog .title .only-title h2 {
+    color: var(--color-very-dark-blue);
+}
+
+main .blog .title .only-title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .blog .title .open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .blog .title .open a {
+    text-decoration: none;
+    color: var(--color-very-dark-blue);
+    transition: 200ms ease-in-out;
+}
+
+main .blog .title .open a:hover {
+    text-decoration: underline;
+    transform: translate(5px, -5px);
+}
+
+main .blog .title .open img {
+    width: 20px;
+    height: 20px;
+}
+
+main .blog .cards {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+
+main .blog .cards .card {
+    width: 25vw;
+    padding: 20px;
+    margin: 10px 20px 0px 0px;
+    border-radius: 16px;
+    transition: 200ms ease-in-out;
+    box-shadow: 0px 5px 5px rgba(150, 150, 150, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+main .blog .cards .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .blog .cards .card:hover {
+    transform: translate(0px, -10px);
+}
+
+main .blog .cards .card .image img {
+    width: 315px;
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+}
+
+main .blog .cards .card p {
+    color: var(--color-very-dark-blue);
+    font-family: var(--font-medium);
+}
+
+main .blog .cards .card .content span {
+    color: #777777;
+}
+
+main .blog .cards .card .content a {
+    text-decoration: none;
+    display: flex;
+    color: var(--color-white);
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 16px;
+    background-color: var(--color-bright-blue);
+    padding: 10px;
+    width: 100%;
+}
+
+main .blog .cards .card .content a:hover {
+    opacity: 0.9;
+    color: var(--color-white);
+}
+
+main .blog .cards .card .content a span {
+    color: var(--color-white);
+}
+
+main .blog .cards .card a img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+main .work-we {
+    padding: 5%;
+    margin-top: 5%;
+    background-color: var(--color-white);
+}
+
+main .work-we .container .title h3 {
+    color: var(--color-bright-blue);
+    margin-bottom: 10px;
+}
+
+main .work-we .container .title h2 {
+    color: var(--color-very-dark-blue);
+    margin-bottom: 10px;
+}
+
+main .work-we .container .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .work-we .container .image {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .work-we .container .image .content {
+    padding: 0% 5%;
+    margin-top: 50px;
+}
+
+main .work-we .container .image p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: var(--font-medium);
+    color: var(--color-very-dark-blue);
+}
+
+main .work-we .container .image span {
+    font-size: 1rem;
+    color: #333333;
+}
+
+main .work-we .container .image .content .opport {
+    margin-top: 100px;
+}
+
+main .work-we .container .image .content .opport a {
+    padding: 20px 50px;
+    background-color: var(--color-bright-blue);
+    text-decoration: none;
+    border-radius: 16px;
+    color: var(--color-white);
+    transition: 200ms ease-in-out;
+}
+
+main .work-we .container .image .content .opport a:hover {
+    opacity: 0.9;
+}
+
+main .work-we .container .image img {
+    border-radius: 16px;
+}
+
+main .contact {
+    padding: 5%;
+    background-color: var(--color-very-dark-blue);
+}
+
+main .contact .container {
+    display: flex;
+}
+
+main .contact .image {
+    width: 600px;
+    background-image: url("../images/tecnico.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    border-radius: 16px 0px 0px 16px;
+}
+
+main .contact .content {
+    width: 50%;
+    padding: 2% 0%;
+    color: var(--color-very-dark-blue);
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 16px 16px 0px;
+}
+
+main .contact .content form {
+    width: 100%;
+    padding: 2%;
+    color: var(--color-very-dark-blue);
+    background-color: var(--color-white);
+}
+
+main .contact .content form button {
+    padding: 16px;
+    background-color: var(--color-bright-blue);
+    border: 1px solid var(--color-bright-blue);
+    border-radius: 16px;
+    color: var(--color-white);
+}
+
+main .contact .content form input,
+main .contact .content form textarea {
+    padding: 14px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-very-dark-blue);
+    transition: 200ms ease-in-out;
+}
+
+main .contact .content form input:focus-visible,
+main .contact .content form textarea:focus-visible {
+    outline: 1px solid var(--color-bright-blue);
+    border-color: var(--color-bright-blue);
+}
+
+main .contact .content form label {
+    color: var(--color-very-dark-blue);
+    margin: 2px 0px;
+}
+
+main .contact .content form label::after {
+    content: " *";
+    color: var(--color-bright-blue);
+}
+
+main .contact .content form .title h2 {
+    font-size: 1.8rem;
+}
+
+main .contact .content form .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5px 0px;
+}
+
+main .contact .content .checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5px 0px;
+}
+
+main .contact .content .checkbox label a {
+    color: var(--color-bright-blue);
+}
+
+main .contact .content .checkbox label {
+    font-size: 0.8rem;
+}
+
+main .contact .content .checkbox input {
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-very-dark-blue);
+    margin-top: 10%;
+    padding: 5%;
+    border-radius: 16px 16px 0px 0px;
+}
+
+footer .logo-area img {
+    width: 350px;
+}
+
+footer .logo-area {
+    color: var(--color-white);
+    height: 100%;
+}
+
+footer .logo-area p {
+    margin-bottom: 5%;
+}
+
+footer .logo-area span a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+footer .logo-area span a:hover {
+    text-decoration: underline;
+}
+
+footer .itens {
+    display: flex;
+}
+
+footer .links {
+    margin: 0% 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .links .item {
+    margin: 0px 12px;
+}
+
+footer .links .item img {
+    width: 20px;
+    margin-right: 3px;
+}
+
+footer .links .item ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: max-content;
+}
+
+footer .links h3 {
+    color: var(--color-bright-blue);
+    font-weight: var(--font-bold);
+}
+
+footer .links ul li {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+footer .links a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+footer .links a:hover {
+    text-decoration: underline;
+}
+
+footer .other {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0% 5% 0%;
+}
+
+footer .newsletter form label {
+    color: var(--color-white);
+    font-weight: var(--font-bold);
+}
+
+footer .newsletter form {
+    display: flex;
+    align-items: center;
+}
+
+footer .newsletter form .box {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .newsletter form .check {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+footer .newsletter form #accept {
+    width: 20px !important;
+    font-family: var(--font-regular) !important;
+    margin-right: 5px;
+}
+
+footer .button {
+    margin-left: 10px;
+}
+
+footer .button button {
+    background-color: var(--color-bright-blue);
+    border: none;
+    color: var(--color-white);
+    border-radius: 16px;
+    padding: 16px 50px;
+}
+
+footer .button button:hover {
+    opacity: 0.9;
+}
+
+footer .newsletter form .check label {
+    font-family: var(--font-regular) !important;
+}
+
+footer .newsletter form .box input {
+    padding: 16px;
+    width: 450px;
+    border: none;
+    border-radius: 16px;
+    transition: 200ms ease-in-out;
+}
+
+footer .newsletter form .box input:focus-visible {
+    outline: 1px solid var(--color-bright-blue);
+}
+
+footer .social h2 {
+    color: var(--color-white);
+    font-weight: var(--font-bold);
+}
+
+footer .social .links-social ul {
+    display: flex;
+    margin-top: 5px;
+}
+
+footer .social .links-social li {
+    margin-right: 10px;
+    list-style: none;
+}
+
+footer .social .links-social li a {
+    background-color: var(--color-bright-blue);
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    align-items: center;
+    border-radius: 10px;
+    transition: 200ms ease-in-out;
+}
+
+footer .social .links-social li a:hover {
+    background-color: var(--color-dark-blue);
+}
+
+/* Copyright */
+.copyright {
+    padding: 16px 5%;
+    background-color: var(--color-bright-blue);
+}
+
+.copyright span {
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+/* Cookies Banner */
+.cookies-banner {
+    position: absolute;
+    display: none;
+    position: fixed;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    z-index: 100;
+    bottom: 5%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 16%;
+    width: 70%;
+    padding: 20px 30px;
+    transition: 200ms ease-in-out;
+}
+
+.cookies-banner .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cookies-banner span:nth-child(1) {
+    color: var(--color-bright-blue);
+    font-weight: var(--font-bold);
+}
+
+.cookies-banner span:nth-child(2) {
+    color: var(--color-very-dark-blue);
+}
+
+.cookies-banner a {
+    text-decoration: underline;
+    color: var(--color-very-dark-blue);
+    transition: 200ms ease-in-out;
+}
+
+.cookies-banner a:hover {
+    text-decoration: underline;
+    color: var(--color-bright-blue);
+}
+
+.cookies-banner img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.cookies-banner .buttons {
+    display: flex;
+}
+
+.cookies-banner .buttons button {
+    padding: 10px 20px;
+    transition: 200ms ease-in-out;
+    margin: 0px 5px;
+    width: 150px;
+    border-radius: 16px;
+    border: none;
+    background-color: var(--color-white);
+}
+
+.cookies-banner button:nth-child(1) {
+    border: 1px solid var(--color-very-dark-blue);
+    color: var(--color-very-dark-blue);
+}
+
+.cookies-banner button:nth-child(2) {
+    border: 1px solid var(--color-bright-blue);
+    background-color: var(--color-bright-blue);
+    color: var(--color-white);
+    transition: 200ms ease-in-out;
+}
+
+.cookies-banner button:nth-child(1):hover {
+    border-color: var(--color-bright-blue);
+    color: var(--color-bright-blue);
+}
+
+.cookies-banner button:nth-child(2):hover {
+    opacity: 0.9;
+}
+
+/* Chat */
+.chat {
+    position: fixed;
+    z-index: 100;
+    right: 5%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+}
+
+.chat #chat,
+.chat #whatsapp {
+    transition: 200ms ease-in-out;
+    margin: 5px 0px;
+}
+
+.chat #chat:hover,
+.chat #whatsapp:hover {
+    transform: translate(0px, -5px);
+}
+
+.chat #chat img {
+    width: 60px;
+    border-radius: 50px;
+}
+
+.chat #whatsapp img {
+    width: 70px;
+    border-radius: 10px;
+}

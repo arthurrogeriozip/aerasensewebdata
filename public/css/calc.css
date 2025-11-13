@@ -1,0 +1,454 @@
+@import url("../css/index.css");
+
+body {
+    background-color: var(--color-very-dark-blue);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+}
+
+#mapa {
+    position: absolute;
+    top: -5px;
+    background-image: url("../images/Brazil_Blank_Map.svg");
+    height: 750px;
+    background-size: cover;
+    width: 750px;
+    right: 5%;
+    z-index: 1;
+}
+
+header {
+    height: 75vh;
+}
+
+header .risco {
+    background-color: var(--color-white);
+    height: max-content;
+    margin: 10% 5% 5% 5%;
+    padding: 5%;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+header .risco .container .title {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-very-dark-blue);
+}
+
+header .risco .container .title h2 {
+    color: var(--color-very-dark-blue);
+    margin: 2% 0%;
+    font-size: 2rem;
+}
+
+header .risco .container .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+header .risco .container .title #data {
+    font-size: 0.8rem;
+}
+
+header .risco .container .number {
+    background-color: var(--color-very-dark-blue);
+    padding: 2% 5%;
+    margin-left: 5%;
+    border-radius: 16px;
+}
+
+header .risco .container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-white);
+    font-weight: medium;
+}
+
+header .risco .container .card span:nth-child(1) {
+    color: var(--color-bright-blue);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.number canvas {
+    width: 25vw;
+    height: auto;
+}
+
+.where-problems {
+    position: relative;
+    background-color: var(--color-white);
+    margin: 10% 5% 5% 5%;
+    padding: 3%;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.where-problems .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.where-problems .container h2 {
+    color: var(--color-very-dark-blue);
+    margin: 5% 0%;
+    font-size: 2rem;
+}
+
+.where-problems .container .title {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.where-problems .container .title p {
+    margin: 3% 0%;
+    color: var(--color-very-dark-blue);
+}
+
+.where-problems .container .title #data {
+    font-size: 0.8rem;
+}
+
+.where-problems .container .number {
+    display: flex;
+}
+
+.where-problems .container .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .escalada {
+    padding: 5%;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    margin: 5%;
+}
+
+main .escalada .title {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0%;
+}
+
+main .escalada .title h2 {
+    color: var(--color-very-dark-blue);
+    font-size: 2rem;
+}
+
+main .escalada .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .escalada .title .line {
+    width: 35vw;
+    border-top: 4px solid var(--color-very-dark-blue);
+}
+
+main .escalada .title .line p {
+    color: var(--color-very-dark-blue);
+}
+
+main .escalada .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 1%;
+}
+
+main .escalada .items span:nth-child(1) {
+    color: var(--color-white);
+    padding: 15px 25px;
+    font-weight: bold;
+    border-radius: 16px;
+    background-color: var(--color-bright-blue);
+}
+
+main .escalada .items p {
+    padding: 10px 0px;
+    color: var(--color-very-dark-blue);
+    font-weight: bold;
+}
+
+main .escalada .items span:nth-child(3) {
+    margin: 10px 0px;
+    color: var(--color-very-dark-blue);
+    text-align: center;
+}
+
+main .escalada .cards .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .escalada .cards .divisor {
+    content: "";
+    border-radius: 5px;
+    margin: 0px 10px;
+    height: 3px;
+    width: 150px;
+    background-color: var(--color-very-dark-blue);
+}
+
+main .real {
+    padding: 5%;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    margin: 5%;
+}
+
+main .real .title h2 {
+    color: var(--color-very-dark-blue);
+    font-size: 2rem;
+}
+
+main .real .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .details {
+    padding: 5%;
+    background-color: var(--color-white);
+}
+
+main .details .number {
+    display: flex;
+}
+
+main .details .number .cards {
+    padding: 3%;
+    width: 50%;
+    margin: 30px 10px;
+}
+
+main .details .number #sem_sensor {
+    background-color: #fef2f2;
+    border: 2px solid var(--color-danger);
+    border-radius: 16px;
+}
+
+main .details .number #com_sensor {
+    background-color: #f0fdf4;
+    border: 2px solid var(--color-success);
+    border-radius: 16px;
+}
+
+main .details .number .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+main .details .number #sem {
+    color: #991b1b;
+    margin: 10px 0px;
+}
+
+main .details .title h2 {
+    color: var(--color-very-dark-blue);
+}
+
+main .details .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .details .title h2 p {
+    color: var(--color-very-dark-blue);
+}
+
+main .details .number #com {
+    color: #166534;
+    margin: 10px 0px;
+}
+
+main .details .number ul li {
+    color: var(--color-very-dark-blue);
+}
+
+main .real .number {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+main .real .number #impactos {
+    width: 50%;
+}
+
+main .real .title p {
+    color: var(--color-very-dark-blue);
+    padding: 2% 0px;
+}
+
+main .real .number .cards {
+    display: flex;
+    flex-direction: column;
+}
+
+main .real .number .card {
+    padding: 2%;
+    display: flex;
+    margin: 6px 0px;
+    border-radius: 16px;
+    background-color: var(--color-very-dark-blue);
+}
+
+main .real .number .card .content p {
+    color: var(--color-white);
+    margin-top: 5px;
+}
+
+main .real .number .card .image {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bright-blue);
+    border-radius: 16px;
+    margin-right: 15px;
+}
+
+main .real .number .card .image img {
+    width: 50px;
+    height: 50px;
+}
+
+main .real .number .card .title-card {
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+main .real .custos-int .title-cust {
+    color: var(--color-very-dark-blue);
+    font-weight: bold;
+}
+
+main .real .number .grafico-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+main .real .number .grafico-container .title-grafic {
+    color: var(--color-very-dark-blue);
+    font-weight: bold;
+}
+
+main .real .custos-int {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Pontuação */
+
+main .container-risco {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .calcule {
+    padding: 5% 20%;
+    background-color: var(--color-white);
+}
+
+main .calcule .title h2 {
+    color: var(--color-very-dark-blue);
+    font-size: 2rem;
+}
+
+main .calcule .title h4 {
+    color: var(--color-very-dark-blue);
+    font-size: 1.2rem;
+}
+
+main .calcule .title h2 span {
+    color: var(--color-bright-blue);
+}
+
+main .calcule .container {
+    padding: 2%;
+}
+
+main .calcule .inputs {
+    margin: 15px 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .calcule .inputs label::after {
+    content: " *";
+    color: var(--color-bright-blue);
+}
+
+main .calcule .inputs label {
+    color: var(--color-very-dark-blue);
+    font-weight: medium;
+}
+
+main .calcule .inputs input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-very-dark-blue);
+    transition: 200ms ease-in-out;
+}
+
+main .calcule .inputs select {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-very-dark-blue);
+    transition: 200ms ease-in-out;
+}
+
+main .calcule .inputs button {
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid var(--color-bright-blue);
+    background-color: var(--color-bright-blue);
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+main .calcule .inputs input:focus-visible {
+    border: 1px solid var(--color-bright-blue);
+}
+
+main .calcule .container .buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+main .calcule .container .buttons button {
+    width: 300px;
+    margin: 0px 15px;
+}
+
+main .calcule .resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-very-dark-blue);
+}
+
+/*Footer*/
+footer {
+    margin-top: 0;
+    border-radius: 16px;
+}
+
+footer .links {
+    flex-wrap: nowrap;
+}

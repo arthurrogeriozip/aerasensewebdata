@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M0 0L19 0" fill="none" stroke-width="3" stroke="#0A2B40" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.5 9.5)" />
+    <path d="M0 0L19 0" fill="none" stroke-width="3" stroke="#0A2B40" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.5 15.833)" />
+    <path d="M0 0L9.5 0" fill="none" stroke-width="3" stroke="#0A2B40" stroke-linecap="round" stroke-linejoin="round" transform="translate(19 22.167)" />
+    <path d="M0 0L9.5 0" fill="none" stroke-width="3" stroke="#0A2B40" stroke-linecap="round" stroke-linejoin="round" transform="translate(19 28.5)" />
+    <path d="M0 0.95C0 0.425331 0.425331 0 0.95 0C0.95 0 30.7167 0 30.7167 0C31.2414 0 31.6667 0.425331 31.6667 0.95C31.6667 0.95 31.6667 30.7167 31.6667 30.7167C31.6667 31.2414 31.2414 31.6667 30.7167 31.6667C30.7167 31.6667 0.95 31.6667 0.95 31.6667C0.425331 31.6667 0 31.2414 0 30.7167C0 30.7167 0 0.95 0 0.95Z" fill="none" stroke-width="3" stroke="#0A2B40" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.167 3.167)" />
+    <path d="M0 6.33333C0 6.33333 0 0 0 0L3.16667 0L3.16667 6.33333C3.16667 6.33333 0 6.33333 0 6.33333Z" fill="#0A2B40" fill-rule="evenodd" stroke-width="3" stroke="#0A2B40" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.5 22.167)" />
+  </g>
+</svg>
