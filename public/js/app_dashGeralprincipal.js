@@ -1,3 +1,3 @@
 function logOut(){
-  window.location.href="../../marley/aerasense/login.html"
+  window.location.href="../login.html"
 }

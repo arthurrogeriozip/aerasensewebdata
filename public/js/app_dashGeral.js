@@ -25,5 +25,5 @@ function abrirSubmenu(){
 }
 
 function logOut(){
-  window.location.href="../../marley/aerasense/index.html"
+  window.location.href="../index.html"
 }
