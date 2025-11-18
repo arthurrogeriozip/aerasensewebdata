@@ -1,0 +1,72 @@
+.container {
+  margin-bottom: 1.25rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.container-cards{
+width: 94%;
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: flex-start;
+}
+
+.card-setor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 16rem;
+  border-radius: 1rem;
+  background: linear-gradient(var(--cor-bg)50%, var(--cor-ativo) 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  color: var(--cor-texto2);
+  box-shadow: 2px 2px 4.6px 0 rgba(10, 43, 64, 0.7);
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.card-setor:hover{
+  background: linear-gradient(aliceblue 50%, var(--cor-ativo) 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+}
+
+.icone-setor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-ativo);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+}
+
+#div_card svg{
+  width: 3rem;
+  height: 3rem;
+  fill: var(--cor-bg);
+}
+
+.titulo-setor{
+  font-size: 1.5rem;
+}
+
+.texto-setor {
+  text-align: center;
+  font-weight: 300;
+  text-wrap: balance;
+}

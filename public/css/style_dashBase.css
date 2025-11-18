@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* aqui em cima importei a fonte pra pag da dashboard*/
+/* aqui no root vai todo o design de cores base da página */
+:root {
+  --cor-base: #0a2b40;
+  --cor-hover: #18628d;
+  --cor-ativo: #3b9ddc;
+  --cor-texto: #ffffff;
+  --cor-texto2: #000000;
+  --cor-bg: #ffffff;
+}
+
+/* seletor de estilos universal, aplica pra tudo no doc */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* mesma ideia do root, mas mais usado pra tamanhos, fontes e layout */
+html {
+  font-family: Kanit, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  /* tam dinâmico de acordo com tam da tela*/
+  min-height: 100vh;
+  background-color: var(--cor-base);
+  color: var(--cor-texto);
+  display: grid;
+  /* a medida fração do espaço (flexível), proporcional dentro de um grid*/
+  grid-template-columns: auto 1fr;
+}
+
+/* =============== INÍCIO DO CSS DO MENU LATERAL AKA SIDEBAR =============== */
+
+#sidebar {
+  box-sizing: border-box;
+  height: 100dvh;
+  width: 16rem;
+  padding: 5px 1rem;
+  background-color: var(--cor-base);
+
+  position: sticky; /* serve pra ficar no lugar, mas não dar overlap nos textos da main*/
+  top: 0;
+  align-self: start;
+  text-wrap: nowrap;
+  overflow: auto;
+}
+
+
+#sidebar ul {
+  list-style: none; /* remove os bullet points q aparecem originalmente no modelo lista */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* aqui é onde organiza a div da logo */
+ .logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+  .logo{
+  height: auto;
+  width: 80%;
+  }
+
+/*aqui é onde faz ficar colorido onde tá clicado*/
+#sidebar ul li.ativo a {
+  background-color: var(--cor-ativo);
+  color: var(--cor-texto);
+}
+
+/*aqui é onde deixa bonito os itens do menu*/
+#sidebar a,
+#sidebar .logo,
+#sidebar .perfil,
+#sidebar .logOut-btn {
+  border-radius: 0.5rem;
+  padding: 0.85rem;
+  text-decoration: none;
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.perfil {
+  text-wrap: wrap;
+} /* desfaz o nowrap herdado do #sidebar pra poder quebrar a linha no nome no perfil */
+
+.perfil span {
+  flex: 1; /* ocupa o espaço flexível entre os ícones */
+  min-width: 0; /* necessário pro flex permitir quebra */
+  white-space: normal; /* ctz que quebra o texto */
+  line-height: 1.25rem;
+}
+
+
+/*aqui muda o tamanho dos ícones da parte do perfil, supostamente era pra mudar só o do avatar, mas mudou os dois e ficou bom, então é isso*/
+.perfil svg {
+  width: 1.75rem; /* cresce/encolhe em relação à fonte */
+  height: 1.75rem;
+}
+
+.perfil {
+  margin-top: auto; /*joga o perfil pro final da sidebar*/
+}
+
+.logOut-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer; /*faz ficar a mãozinha quando passa o mouse por cima*/
+}
+
+/* pra ficar dinâmico de acordo com o nome, precisava fazer essas alterações específicas */
+.perfil .logOut-btn {
+  width: auto; /* sobrescreve o width:100% herdado */
+  margin-left: auto; /* cola o botão à direita respeitando a margem */
+  padding: 0.35rem; /* aumenta o raio de clique sem aumentar a altura do resto*/
+  display: flex;
+  align-items: center;
+}
+
+#sidebar svg {
+  /*aqui define que os ícones gerais da página não de forma errada e define a cor deles*/
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--cor-texto);
+}
+
+/*aqui garante que os textos do menu e do botão de logout fiquem centralizados */
+#sidebar a span,
+#sidebar .logOut-btn span {
+  flex-grow: 1;
+}
+
+/* autoexplicativo: corzinha quando passa o mouse em cima*/
+#sidebar a:hover,
+#sidebar .logOut-btn:hover {
+  background-color: var(--cor-hover);
+}
+
+/* =============== FIM DO CSS DO MENU =============== */
+
+/* DEFINIÇÃO DO LAYOUT DA MAIN DO BODY */
+main {
+  padding: 0.2rem;
+  background-color: var(--cor-bg);
+  color: var(--cor-texto2);
+}
+main p {
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+}

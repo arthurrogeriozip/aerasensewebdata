@@ -1,0 +1,136 @@
+.container {
+  margin-bottom: 1.25rem;
+  /* espaçamento acompanha o tamanho do texto (em) */
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+
+/* DIV DE CABEÇALHO DA MAIN, TEM O TITULO E A BARRA DE BUSCA */
+.cabecalho-dash {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* CONJUNTO DA BARRA DE BUSCA: INPUT + BOTAO COM ICONE DE LUPA */
+.barra-busca {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+
+.titulo-dash {
+  font-size: 2rem;
+  color: var(--cor-texto2);
+}
+
+
+/* CONFIGURAÇÃO DO LAYOUT DO IPT DE BUSCA */
+.ipt-busca {
+  width: 13.25rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  border: 2px solid var(--cor-base);
+  outline: none;
+  text-align: right;
+  font-family: kanit;
+}
+
+/* CONFIGURAÇÃO DA FONTE DO PLACEHOLDER */
+.ipt-busca::placeholder{
+    font-family: kanit;
+    font-size: 0.8rem;
+}
+
+/* MUDA ONDE O TEXTO DO PLACEHOLDER FICA */
+.ipt-busca:placeholder-shown {
+  text-align: right;
+}
+
+/* BOTAOZINHO DE BUSCA */
+.buscar-btn {
+  background-color: var(--cor-base);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: none;
+}
+
+/* ICONE DO BOTAOZINHO DE BUSCA */
+.buscar-btn svg {
+  stroke: #fff;
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke-width: 32;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+/* CONFIGURAÇAO DA LINHA DE CARDS DE KPI */
+.cards-kpi {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-individual {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  width: 13.75rem;
+  padding: 1.5rem 0.9rem;
+  border-radius: 1rem;
+  background: #0a2b40;
+  color: var(--cor-texto);
+  box-shadow: 2px 2px 4.6px 0 rgba(10, 43, 64, 0.7);
+}
+
+.titulo-card {
+  font-size: 1rem;
+}
+
+.dado-kpi {
+  font-size: 1.5rem;
+}
+
+.legenda-kpi {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* FIM DA CONFIGURAÇÃO DA LINHA DE KPIS */
+
+/* ESTILIZAÇÃO DO CHART JS */
+.todos-charts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grafico-principal{
+    min-width: 0;
+    height: 34.5rem;
+    align-self: stretch;
+}
+
+.linha-charts{
+ display: grid;
+  grid-template-columns: 2fr 1fr; /*aqui o grafico de barra ocupa 2/3 da div e o de donut 1/3*/
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.grafico-secundario {
+min-width: 0;
+height: 22.375rem;
+}
