@@ -133,7 +133,7 @@ button {
     border: none;
 }
 .container-input-senha button {
-    background-image: url("./assets/Ocultarsenha.png");
+    background-image: url("./../assets/icons/Ocultarsenha.png");
     border: none;
     background-color: white;
     width: 25px;

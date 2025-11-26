@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-var avisoController = require("../controllers/avisoController");
+var avisoController = require("../../controllers/ControllerAntigos/avisoController");
 
 router.get("/listar", function (req, res) {
     avisoController.listar(req, res);
