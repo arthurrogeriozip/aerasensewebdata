@@ -48,7 +48,7 @@
 
             </div>
 
-            <button onclick="conta()" class="botaoEntrar">Entrar na conta</button>
+            <button onclick="entrar()" class="botaoEntrar">Entrar na conta</button>
 
             <div id="div_mensagem"></div>
             
@@ -74,19 +74,13 @@
 
 
     function entrar() {
-        aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            console.log('Ensira suas credenciais corretamente');
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -110,14 +104,14 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.EMAIL_USUARIO = json[0].email;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
+                    sessionStorage.ID_USUARIO = json[0].id;
+                    sessionStorage.ID_EMPRESA = json[0].empresaId;
 
                     setTimeout(function () {
                         window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 1000); 
 
                 });
 
@@ -127,7 +121,6 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
@@ -136,10 +129,6 @@
         })
 
         return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 
 </script>
