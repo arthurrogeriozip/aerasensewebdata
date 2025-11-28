@@ -109,6 +109,8 @@
                     sessionStorage.ID_USUARIO = json[0].id;
                     sessionStorage.ID_EMPRESA = json[0].empresaId;
 
+                    CriarLog(json[0].id,json[0].empresaId);
+
                     setTimeout(function () {
                         window.location = "./dashboard/cards.html";
                     }, 1000); 
@@ -129,6 +131,29 @@
         })
 
         return false;
+    }
+
+    function CriarLog(idUsuario,idEmpresa){
+
+         fetch("/usuarios/CriarLog", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuario: idUsuario,
+                idEmpresa: idEmpresa
+            })
+        }).then(function (resultado){
+
+            if(resultado.ok){
+
+                console.log('Okey Dokey');
+
+            }
+
+        })
+
     }
 
 </script>

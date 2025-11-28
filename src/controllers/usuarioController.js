@@ -19,8 +19,12 @@ function autenticar(req, res) {
                     console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
                     if (resultadoAutenticar.length == 1) {
-                       
+
+
+
                         res.json(resultadoAutenticar);
+
+
 
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
@@ -99,16 +103,36 @@ function cadastrar(req, res) {
                                 res.status(500).json(erro.sqlMessage);
                             }
                         );
-            
-                }else{
-                     console.error("TOKEN nÃO EXISTE")
+
+                } else {
+                    console.error("TOKEN nÃO EXISTE")
                 }
 
             })
     }
 }
 
+function CriarLog(req, res) {
+
+    var idUsuario = req.body.idUsuario;
+    var idEmpresa = req.body.idEmpresa;
+
+    usuarioModel.CriarLog(idUsuario,idEmpresa)
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+
+                res.send('Tudo Certo');
+
+            }
+
+        })
+
+
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    CriarLog
 }

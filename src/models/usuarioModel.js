@@ -32,8 +32,20 @@ function VerificacaoEmpresa(Token){
     return database.executar(instrucaoSql);
 }
 
+function CriarLog(idUsuario,empresaId){
+
+    var instrucaoSql = `
+        insert into acesso values(default,${idUsuario},${empresaId},default,null)
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
 module.exports = {
     autenticar,
     cadastrar,
-    VerificacaoEmpresa
+    VerificacaoEmpresa,
+    CriarLog
+
 };

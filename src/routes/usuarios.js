@@ -14,4 +14,10 @@ router.post("/autenticar", function (req,res){
     usuarioController.autenticar(req,res);
 })
 
+router.post('/criarLog', function (req,res){
+
+    usuarioController.CriarLog(req,res);
+
+})
+
 module.exports = router;
