@@ -1,14 +1,23 @@
 {
-  "name": "web-data-viz",
+  "name": "aerasense",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto em Grupo SPTECH",
+  "homepage": "https://github.com/arthurrogeriozip/aerasensewebdata#readme",
+  "bugs": {
+    "url": "https://github.com/arthurrogeriozip/aerasensewebdata/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurrogeriozip/aerasensewebdata.git"
+  },
+  "license": "MIT",
+  "author": "Feito pelos desenvolvedores @ São Paulo Tech School / Bandtec Digital School",
+  "type": "commonjs",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon --exec node app.js"
   },
-  "author": "Feito pelos desenvolvedores @ São Paulo Tech School / Bandtec Digital School",
-  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
