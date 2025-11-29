@@ -1,6 +1,6 @@
-node_modules
-package-lock.json
 
-.github
+# Ignorar o node_modules
+node_modules/
 
+# Ignorar o .env.dev
 .env.dev

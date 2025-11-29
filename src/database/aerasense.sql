@@ -17,9 +17,9 @@ CREATE TABLE empresa (
     status_empresa VARCHAR(15) NOT NULL DEFAULT 'ativo', -- Status da empresa
     data_hora_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP, -- Data e hora de cadastro da empresa
     data_hora_atualizacao DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Data e hora de atualização da empresa
-    codigo_ativacao CHAR(6) UNIQUE NOT NULL -- Código de ativação da empresa
+    codigo_ativacao CHAR(6) UNIQUE NOT NULL, -- Código de ativação da empresa
     CONSTRAINT chkStatusEmpresa
-        CHECK (status_empresa IN ('ativo', 'inativo')), -- Status da empresa
+        CHECK (status_empresa IN ('ativo', 'inativo')) -- Status da empresa
 );
 
 -- Endereço
@@ -197,3 +197,4 @@ JOIN medicao ON sensor.id = medicao.fk_id_sensor;
 
 -- Excluir o banco de dados
 DROP DATABASE aerasense;
+

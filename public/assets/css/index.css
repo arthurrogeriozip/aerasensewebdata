@@ -65,6 +65,7 @@ header .bg {
     height: 100vh;
     position: absolute;
     z-index: 1;
+    right: 5%;
 }
 
 header .video-side .video-container {
@@ -868,6 +869,7 @@ footer .newsletter form #accept {
 
 footer .button {
     margin-left: 10px;
+    margin-top: -5px;
 }
 
 footer .button button {
@@ -947,10 +949,10 @@ footer .social .links-social li a:hover {
     border-radius: 16px;
     z-index: 100;
     bottom: 5%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin: 0% 16%;
-    width: 70%;
+    margin: 0% 20%;
+    width: 60%;
     padding: 20px 30px;
     transition: 200ms ease-in-out;
 }

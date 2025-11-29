@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.style.display = "flex";
   }
 
-  // Função para esconder o banner de cookies
-  function esconderBannerCookies() {
-    banner.style.display = "none";
-  }
-
   // Chama a função de exibir o banner de cookies, após 2s que a página carrega
-  setTimeout(exibirBannerCookies, 2500);
+  setTimeout(exibirBannerCookies, 3000);
 });
+
+// Função para esconder o banner de cookies
+function esconderBannerCookies() {
+  banner.style.display = "none";
+}
